@@ -18,7 +18,7 @@
   <body>
     <!-- Start: Top Header -->
     <nav class="relative z-50 bg-bg border-b border-lines">
-      <div class="max-w-[1280px] 2xl:max-w-[1480px] mx-auto">
+      <div class="max-w-[1280px] 2xl:max-w-[1440px] mx-auto">
         <div
           class="py-4 sm:py-6 relative flex items-center justify-between px-3 sm:px-4"
         >
@@ -200,22 +200,71 @@
         </div>
       </div>
 
-     <div class="absolute inset-0 max-w-[1280px] mx-auto">
-  <div 
-    class="absolute top-0 left-0 
-           -translate-x-[40%] -translate-y-[35%]
-           sm:-translate-x-[35%] sm:-translate-y-[35%]
-           lg:-translate-x-[30%] lg:-translate-y-[30%]
-           2xl:-translate-x-[30%] 2xl:-translate-y-[25%]
-           w-[380px] sm:w-[480px] lg:w-[560px] 2xl:w-[650px]
-           aspect-square"
-  >
-    <div x-data="iconComponent('circle', 'w-full h-full')" x-html="icon"></div>
-  </div>
-</div>
-
+      <div class="absolute inset-0 max-w-[1280px] mx-auto">
+        <div
+          class="absolute top-0 left-0 -translate-x-[40%] -translate-y-[35%] sm:-translate-x-[35%] sm:-translate-y-[35%] lg:-translate-x-[30%] lg:-translate-y-[30%] 2xl:-translate-x-[30%] 2xl:-translate-y-[25%] w-[380px] sm:w-[480px] lg:w-[560px] 2xl:w-[650px] aspect-square"
+        >
+          <div
+            x-data="iconComponent('circle', 'w-full h-full')"
+            x-html="icon"
+          ></div>
+        </div>
+      </div>
     </section>
     <!-- End: Hero Section -->
+
+    <!-- Start: About Section -->
+    <section
+      class="py-[60px] sm:py-[80px] md:py-[100px] xl:pt-[120px] bg-pure px-3 sm:px-4"
+    >
+      <div class="max-w-[1240px] 2xl:max-w-[1440px] mx-auto">
+        <!-- Section Heading -->
+        <div class="flex flex-col gap-5">
+          <p
+            class="font-normal leading-[125%] tracking-[0.5px] text-sm sm:text-base md:text-lg text-text-2 border-b border-highlight w-max"
+          >
+            OUR APPROACH TO CURATION
+          </p>
+          <h3
+            class="font-semibold leading-[125%] tracking-[0.5px] text-xl sm:text-[22px] md:text-[28px] lg:text-[36px] 2xl:text-[42px] text-accent-2"
+          >
+            Books That Actually Work
+          </h3>
+          <p
+            class="font-work-sans font-normal leading-[125%] tracking-[0.5px] text-text-2 max-w-[700px]"
+          >
+            These books aren’t here to impress. They’re here to interrupt. Each
+            one chosen not because it's popular — but because it rewires
+            something real.
+          </p>
+        </div>
+
+        <!-- Section Content  -->
+        <div>
+          <div
+            x-data="{
+              curation_process: [
+                { id: '001', title: 'Proven by Lives, Not Lists', desc: 'Every title here has altered the path of someone\'s life. Not just once. Not just emotionally — but in lasting, concrete ways.'},
+                { id: '002', title: 'Built for Inner Impact', desc: 'Some books inform. These reconfigure. Clarity, insight, spiritual depth — that\'s the standard. If it doesn\'t cut deep, it\'s not here.'},
+                { id: '003', title: 'Categories That Matter', desc: 'No endless genres. Only the human core: presence, power, healing, awakening, discipline, meaning — the things no algorithm can serve.'},
+                { id: '004', title: 'Substance Over Surface', desc: 'We exclude what merely entertains or flatters. What\'s here was chosen for depth, for stillness, for the kind of weight that lingers.'}
+              ]
+            }"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-6 sm:mt-8"
+          >
+            <template x-for="process in curation_process" :key="process.id">
+              <div class="bg-soft min-h-[200px] px-2 py-4 sm:py-5 sm:px-6">
+                <div>
+                  <h4 x-text="process.title" class="font-semibold leading-[130%] tracking-[0.5px] text-lg sm:text-xl lg:text-[24px] 2xl:text-[28px]"></h4>
+                  <h4 x-text="process.desc" class="font-work-sans font-normal leading-[125%] tracking-[0.5px] text-text-2 mt-2.5"></h4>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: About Section -->
 
     <!-- Start: Footer -->
     <footer class="text-center py-[30px] border-t border-highlight">
