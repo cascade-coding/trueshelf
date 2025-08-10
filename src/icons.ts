@@ -22,6 +22,15 @@ export const icons: Record<string, (classes?: string) => string> = {
     // 'x': (classes = '') => ``,
     // 'x': (classes = '') => ``,
     // 'x': (classes = '') => ``,
+    // 'x': (classes = '') => ``,
+    // 'x': (classes = '') => ``,
+    // 'x': (classes = '') => ``,
+    // 'x': (classes = '') => ``,
+    // 'x': (classes = '') => ``,
+    // 'x': (classes = '') => ``,
+    // 'x': (classes = '') => ``,
+    // 'x': (classes = '') => ``,
+    // 'x': (classes = '') => ``,
 }
 
 
