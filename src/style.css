@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@theme {
+  --color-bg: #FDFCF9;
+  --color-soft: #E8E6E0;
+  --color-text: #2B2B2B;
+  --color-text-2: #565656;
+  --color-accent: #D8A75D;
+  --color-accent-2: #A5BBA2;
+  --color-accent-hover: #C9963F;
+  --color-pure: #FFFFFF;
+  --color-highlight: #A9C5CD;
+  --color-highlight-2: #E1C5A0;
+  --color-pure: #ffffff;
+
+  
+  --color-lines: #DFDED9;
+
+  --font-work-sans: "Work Sans", sans-serif;
+  --font-primary: "Fraunces", serif;
+
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+@layer utilities {
+  @media (min-width: 540px) and (max-width: 640px) {
+    .custom-range-img-xs {
+      top: 220px;
+    }
+  }
+
+  @media (min-width: 440px) and (max-width: 540px) {
+    .custom-range-img-xs {
+      top: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .custom-range-img-xs {
+      top: 150px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .custom-range-img-xs {
+      top: 50px;
+    }
+  }
+}
+
+.mobile_menu {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+/* Active menu state */
+.mobile_menu.open_menu {
+  user-select: auto;
+  pointer-events: all;
+  opacity: 1;
+}
+
+.mobile_menu .menu {
+  transition: transform 500ms ease-in-out;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>TrueShelf</title>
+  </head>
+  <body>
+    <!-- Start: Top Header -->
+    <nav class="border-b border-lines">
+      <div class="max-w-[1280px] mx-auto">
+        <div
+          class="py-4 sm:py-6 relative flex items-center justify-between px-3 sm:px-4"
+        >
+          <div
+            x-data="iconComponent('logo', 'w-[120px] md:w-[160px] lg:w-[180px]')"
+            x-html="icon"
+          ></div>
+
+          <!-- large menu -->
+          <ul
+            class="hidden lg:flex items-center justify-center gap-x-10 select-none"
+          >
+            <li>
+              <a
+                href="#categories"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >Categories
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#essential"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >Essential
+              </a>
+            </li>
+            <li>
+              <a
+                href="#categories"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >Categories
+              </a>
+            </li>
+            <li>
+              <a
+                href="#donate"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >Donate
+              </a>
+            </li>
+            <li>
+              <a
+                href="#faq"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >FAQ
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >Login / Account
+              </a>
+            </li>
+          </ul>
+
+          <button
+            class="menu_trigger block lg:hidden hover:**:stroke-accent-hover active:**:stroke-accent-hover **:transition cursor-pointer"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 12H20M4 18H20M4 6H20"
+                stroke="#A5BBA2"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <!-- mobile menu -->
+          <div class="absolute inset-0 top-[100%] z-50 overflow-x-clip">
+            <div class="mobile_menu bg-soft py-4 px-6 min-h-[280px] lg:hidden">
+              <ul
+                class="menu flex flex-col items-end justify-center gap-[18px] select-none"
+              >
+                <li>
+                  <a
+                    href="#categories"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >Categories
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#essential"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >Essential
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#categories"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >Categories
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#donate"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >Donate
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#faq"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >FAQ
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >Login / Account
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- End: Top Header -->
+
+    <!-- Start: Hero Section -->
+    <section></section>
+    <!-- End: Hero Section -->
+
+  
+
+    <!-- Start: Footer -->
+    <footer class="text-center py-[30px] border-t border-highlight">
+      <div
+        class="select-none font-work-sans tracking-[0.5px] text-text-2"
+      >
+        © 2025 TrueShelf.
+      </div>
+    </footer>
+    <!-- End: Footer -->
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
