@@ -416,6 +416,65 @@
     </section>
     <!-- End: Essential Section -->
 
+    <!-- Start: FAQ Section -->
+    <section id="faq" class="py-[60px] sm:py-[80px] md:py-[100px] px-3 sm:px-4">
+      <div class="max-w-[1240px] 2xl:max-w-[1440px] mx-auto">
+        <!-- Section Heading -->
+        <div class="flex flex-col gap-5">
+          <h3
+            class="font-semibold leading-[125%] tracking-[0.5px] text-xl sm:text-[22px] md:text-[28px] lg:text-[36px] 2xl:text-[42px] text-accent-2"
+          >
+            Questions You Might Have
+          </h3>
+          <p
+            class="font-work-sans font-normal leading-[125%] tracking-[0.5px] text-text-2 max-w-[700px]"
+          >
+            Not everything needs an answer — but these might help.
+          </p>
+        </div>
+
+        <!-- Section Content  -->
+        <div>
+          <div
+            x-data="{
+              faqs: [
+                { id: '001', question: 'Why are there so few books on this site?', answer: 'We focus on depth and transformation, not volume. Each book is selected because it has the power to shift perspective, not just inform. This isn\'t a collection — it\'s a distillation.'},
+                { id: '002', question: 'Are these books academic, spiritual, or practical?', answer: 'They transcend categories. Some speak to the intellect, others to the inner self — but all serve transformation. If it doesn\'t translate into real change, it doesn\'t belong here.'},
+                { id: '003', question: 'How do you decide which books are included?', answer: 'We look for clarity, precision, and proof-of-impact. Every title is vetted for its ability to move a person from theory to realization — not more noise.'},
+                { id: '004', question: 'Do you update the list regularly?', answer: 'Occasionally, when a title meets the standard. New doesn\'t mean better. Timelessness carries more weight than trends.'},
+                { id: '005', question: 'Is there a hidden ideology or worldview behind the selections?', answer: 'None — other than a commitment to what\'s real and effective. We pull from diverse traditions, disciplines, and thinkers. If it cuts through illusion, it\'s considered.'},
+                { id: '006', question: 'Can I suggest a book for inclusion?', answer: 'Yes. But only if it has changed the way you see or live in a measurable way. We review suggestions with skepticism and care, not popularity.'},
+                { id: '007', question: 'Why is the site free?', answer: 'Because clarity should not be behind a paywall. We rely on those who\'ve found value here to keep it alive — not advertisers or algorithms.'},
+                { id: '008', question: 'Who is behind TrueShelf?', answer: 'A small group of people who care more about truth than polish. We remain anonymous to keep the attention on the books, not ourselves.'},
+                { id: '009', question: 'Is this site affiliated with any publisher, author, or sponsor?', answer: 'No. We remain completely independent. This allows full honesty in what we include — and more importantly, what we don\t.'},
+                { id: '010', question: 'Can I support this project?', answer: 'Yes. You can donate if you feel this space has brought value. Support ensures we stay distraction-free and aligned with our purpose.'},
+              ]
+            }"
+            class="flex flex-col max-w-[630px] mt-6 sm:mt-8"
+          >
+            <template x-for="faq in faqs" :key="faq.id">
+              <div class="border-b border-lines py-6">
+                <div class="group">
+                  <h4
+                    x-text="faq.question"
+                    class="font-semibold leading-[130%] tracking-[0.5px] select-none"
+                  ></h4>
+
+                  <div class="hidden group-hover:block group-active:block">
+                    <h4
+                      x-text="faq.answer"
+                      class="font-work-sans font-medium leading-[125%] tracking-[0.5px] text-text-2 mt-2.5"
+                    ></h4>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: FAQ Section -->
+
     <!-- Start: Footer -->
     <footer class="text-center py-[30px] border-t border-highlight">
       <div class="select-none font-work-sans tracking-[0.5px] text-text-2">
