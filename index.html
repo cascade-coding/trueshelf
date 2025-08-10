@@ -17,8 +17,8 @@
   </head>
   <body>
     <!-- Start: Top Header -->
-    <nav class="border-b border-lines">
-      <div class="max-w-[1280px] mx-auto">
+    <nav class="relative z-50 bg-bg border-b border-lines">
+      <div class="max-w-[1280px] 2xl:max-w-[1480px] mx-auto">
         <div
           class="py-4 sm:py-6 relative flex items-center justify-between px-3 sm:px-4"
         >
@@ -167,16 +167,59 @@
     <!-- End: Top Header -->
 
     <!-- Start: Hero Section -->
-    <section></section>
-    <!-- End: Hero Section -->
+    <section class="bg-gradient-to-br from-[#FDFCF9] to-[#F3F0E8]">
+      <div
+        class="relative z-50 flex flex-col items-center justify-center pt-[50px] pb-[100px] sm:py-[100px]"
+      >
+        <div
+          class="flex flex-col items-start sm:items-center justify-center gap-[30px] px-3 sm:px-4"
+        >
+          <h1
+            class="2xl:max-w-[1280px] mx-auto font-bold leading-[125%] tracking-[0.5px] text-[22px] sm:text-[24px] md:text-[32px] lg:text-[38px] 2xl:text-[56px] sm:text-center"
+          >
+            Books That Transform. Not Just Change.
+            <span class="text-highlight-2 inline-block"
+              >Wisdom That Lasts. Clarity That Cuts Through.</span
+            >
+          </h1>
 
-  
+          <p
+            class="font-work-sans font-normal leading-[140%] sm:leading-[130%] tracking-[0.5px] text-lg sm:text-center max-w-[680px] mx-auto"
+          >
+            Curated selections of timeless books that truly work. no hype, no
+            noise. Just the fundamentals of power, spirit, behavior, and life.
+          </p>
+
+          <div class="mt-3">
+            <a
+              href="#"
+              class="font-work-sans font-normal leading-[140%] tracking-[0.5px] text-lg px-5 py-3 bg-accent hover:bg-accent-hover active:bg-accent-hover transition-all"
+              >Explore the Collection</a
+            >
+          </div>
+        </div>
+      </div>
+
+     <div class="absolute inset-0 max-w-[1280px] mx-auto">
+  <div 
+    class="absolute top-0 left-0 
+           -translate-x-[40%] -translate-y-[35%]
+           sm:-translate-x-[35%] sm:-translate-y-[35%]
+           lg:-translate-x-[30%] lg:-translate-y-[30%]
+           2xl:-translate-x-[30%] 2xl:-translate-y-[25%]
+           w-[380px] sm:w-[480px] lg:w-[560px] 2xl:w-[650px]
+           aspect-square"
+  >
+    <div x-data="iconComponent('circle', 'w-full h-full')" x-html="icon"></div>
+  </div>
+</div>
+
+    </section>
+    <!-- End: Hero Section -->
 
     <!-- Start: Footer -->
     <footer class="text-center py-[30px] border-t border-highlight">
-      <div
-        class="select-none font-work-sans tracking-[0.5px] text-text-2"
-      >
+      <div class="select-none font-work-sans tracking-[0.5px] text-text-2">
         © 2025 TrueShelf.
       </div>
     </footer>
