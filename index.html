@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/trueshelf/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>TrueShelf</title>
+    <script type="module" crossorigin src="/trueshelf/assets/index-C9jz0ZzN.js"></script>
+    <link rel="stylesheet" crossorigin href="/trueshelf/assets/index-BRIbvR8q.css">
+  </head>
+  <body>
+    <!-- Start: Top Header -->
+    <nav class="relative z-30 border-b border-lines">
+      <div class="max-w-[1280px] 2xl:max-w-[1440px] mx-auto">
+        <div
+          class="py-4 sm:py-6 relative flex items-center justify-between px-3 sm:px-4"
+        >
+          <div
+            x-data="iconComponent('logo', 'w-[120px] md:w-[160px] lg:w-[180px]')"
+            x-html="icon"
+          ></div>
+
+          <!-- large menu -->
+          <ul
+            class="hidden lg:flex items-center justify-center gap-x-10 select-none"
+          >
+            <li>
+              <a
+                href="#categories"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >Categories
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#essential"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >Essential
+              </a>
+            </li>
+            <li>
+              <a
+                href="#categories"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >Categories
+              </a>
+            </li>
+            <li>
+              <a
+                href="#donate"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >Donate
+              </a>
+            </li>
+            <li>
+              <a
+                href="#faq"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >FAQ
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                >Login / Account
+              </a>
+            </li>
+          </ul>
+
+          <button
+            class="menu_trigger block lg:hidden hover:**:stroke-accent-hover active:**:stroke-accent-hover **:transition cursor-pointer"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 12H20M4 18H20M4 6H20"
+                stroke="#A5BBA2"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <!-- mobile menu -->
+          <div class="absolute inset-0 top-[100%] z-50 overflow-x-clip">
+            <div class="mobile_menu bg-zinc-50 py-4 px-6 pb-[100px] min-h-[280px] lg:hidden">
+              <ul
+                class="menu flex flex-col items-end justify-center gap-[18px] select-none"
+              >
+                <li>
+                  <a
+                    href="#categories"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >Categories
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#essential"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >Essential
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#categories"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >Categories
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#donate"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >Donate
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#faq"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >FAQ
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:text-accent-hover transition leading-[120%] tracking-[0.5px]"
+                    >Login / Account
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- End: Top Header -->
+
+    <!-- Start: Hero Section -->
+    <section
+      class="bg-gradient-to-br from-[hsla(45,50%,98%,0)] to-[#F3F0E8] relative overflow-hidden"
+    >
+      <div
+        class="relative z-20 flex flex-col items-center justify-center pt-[50px] pb-[100px] sm:py-[100px]"
+      >
+        <div
+          class="flex flex-col items-start sm:items-center justify-center gap-[30px] px-3 sm:px-4"
+        >
+          <h1
+            class="2xl:max-w-[1280px] mx-auto font-bold leading-[125%] tracking-[0.5px] text-[22px] sm:text-[24px] md:text-[32px] lg:text-[38px] 2xl:text-[56px] sm:text-center"
+          >
+            Books That Transform. Not Just Change.
+            <span class="text-highlight-2 inline-block"
+              >Wisdom That Lasts. Clarity That Cuts Through.</span
+            >
+          </h1>
+
+          <p
+            class="font-work-sans font-normal leading-[140%] sm:leading-[130%] tracking-[0.5px] text-lg sm:text-center max-w-[680px] mx-auto"
+          >
+            Curated selections of timeless books that truly work. no hype, no
+            noise. Just the fundamentals of power, spirit, behavior, and life.
+          </p>
+
+          <div class="mt-3">
+            <a
+              href="#"
+              class="font-work-sans font-normal leading-[140%] tracking-[0.5px] text-lg px-5 py-3 bg-accent hover:bg-accent-hover active:bg-accent-hover transition-all"
+              >Explore the Collection</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute inset-0 max-w-[1280px] mx-auto">
+        <div
+          class="absolute top-0 left-0 -translate-x-[40%] -translate-y-[35%] sm:-translate-x-[35%] sm:-translate-y-[35%] lg:-translate-x-[30%] lg:-translate-y-[30%] 2xl:-translate-x-[30%] 2xl:-translate-y-[25%] w-[380px] sm:w-[480px] lg:w-[560px] 2xl:w-[650px] aspect-square"
+        >
+          <div
+            x-data="iconComponent('circle', 'w-full h-full')"
+            x-html="icon"
+          ></div>
+        </div>
+      </div>
+    </section>
+    <!-- End: Hero Section -->
+
+    <!-- Start: About Section -->
+    <section
+      id="about"
+      class="py-[60px] sm:py-[80px] md:py-[100px] xl:pt-[120px] bg-pure px-3 sm:px-4"
+    >
+      <div class="max-w-[1240px] 2xl:max-w-[1440px] mx-auto">
+        <!-- Section Heading -->
+        <div class="flex flex-col gap-5">
+          <p
+            class="font-normal leading-[125%] tracking-[0.5px] text-sm sm:text-base md:text-lg text-text-2 border-b border-highlight w-max"
+          >
+            OUR APPROACH TO CURATION
+          </p>
+          <h3
+            class="font-semibold leading-[125%] tracking-[0.5px] text-xl sm:text-[22px] md:text-[28px] lg:text-[36px] 2xl:text-[42px] text-accent-2"
+          >
+            Books That Actually Work
+          </h3>
+          <p
+            class="font-work-sans font-normal leading-[125%] tracking-[0.5px] text-text-2 max-w-[700px]"
+          >
+            These books aren’t here to impress. They’re here to interrupt. Each
+            one chosen not because it's popular — but because it rewires
+            something real.
+          </p>
+        </div>
+
+        <!-- Section Content  -->
+        <div>
+          <div
+            x-data="{
+              curation_process: [
+                { id: '001', title: 'Proven by Lives, Not Lists', desc: 'Every title here has altered the path of someone\'s life. Not just once. Not just emotionally — but in lasting, concrete ways.'},
+                { id: '002', title: 'Built for Inner Impact', desc: 'Some books inform. These reconfigure. Clarity, insight, spiritual depth — that\'s the standard. If it doesn\'t cut deep, it\'s not here.'},
+                { id: '003', title: 'Categories That Matter', desc: 'No endless genres. Only the human core: presence, power, healing, awakening, discipline, meaning — the things no algorithm can serve.'},
+                { id: '004', title: 'Substance Over Surface', desc: 'We exclude what merely entertains or flatters. What\'s here was chosen for depth, for stillness, for the kind of weight that lingers.'}
+              ]
+            }"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 2xl:gap-8 mt-6 sm:mt-8"
+          >
+            <template x-for="process in curation_process" :key="process.id">
+              <div class="bg-soft min-h-[200px] px-2 py-4 sm:py-5 sm:px-6">
+                <div>
+                  <h4
+                    x-text="process.title"
+                    class="font-semibold leading-[130%] tracking-[0.5px] text-lg sm:text-xl lg:text-[24px] 2xl:text-[28px]"
+                  ></h4>
+                  <h4
+                    x-text="process.desc"
+                    class="font-work-sans font-normal leading-[125%] tracking-[0.5px] text-text-2 mt-2.5"
+                  ></h4>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: About Section -->
+
+    <!-- Start: Categories Section -->
+    <section
+      id="categories"
+      class="py-[60px] sm:py-[80px] md:py-[100px] xl:pt-[120px] px-3 sm:px-4"
+    >
+      <div class="max-w-[1240px] 2xl:max-w-[1440px] mx-auto">
+        <!-- Section Heading -->
+        <div class="flex flex-col gap-5">
+          <p
+            class="font-normal leading-[125%] tracking-[0.5px] text-sm sm:text-base md:text-lg text-text-2 border-b border-highlight w-max"
+          >
+            Explore by Category
+          </p>
+          <h3
+            class="font-semibold leading-[125%] tracking-[0.5px] text-xl sm:text-[22px] md:text-[28px] lg:text-[36px] 2xl:text-[42px] text-accent-2"
+          >
+            Only What Works
+          </h3>
+          <p
+            class="font-work-sans font-normal leading-[125%] tracking-[0.5px] text-text-2 max-w-[700px]"
+          >
+            These are the fields that shape the inner and outer world.
+          </p>
+        </div>
+
+        <!-- Section Content  -->
+        <div>
+          <div
+            x-data="{
+              categories: [
+                { id: '001', title: 'Sleep & Restoration', desc: 'Not just rest — but repair, renewal, and return. These books uncover what modern life has stolen: the sacred mechanics of sleep, the nervous system\’s hidden cycles, and the deep restoration the body was built for. This is where healing begins.'},
+                { id: '002', title: 'Human-to-Human Business', desc: 'The art of influence, connection, and trust—beyond titles and tactics. Books that decode how humans persuade, lead, sell, and shape each other in every conversation. It\’s not about roles. It\’s about results between minds.'},
+                { id: '003', title: 'Health as Intelligence', desc: 'Beyond diet trends or fitness routines—this is about rhythm, awareness, and cellular integrity. Books here address health as a system of coherence, not performance.'},
+                { id: '004', title: 'Wealth & Exchange', desc: 'Money as energy, as attention, as pattern. These books strip finance, business, and leverage down to what\’s essential and repeatable. No hacks—only what endures.'},
+                { id: '005', title: 'Seeing Through Illusion', desc: 'A category for those who want to unlearn. These works dismantle inherited beliefs, automatic narratives, and the subtle trance of modern identity.'},
+                { id: '006', title: 'Inner Traditions', desc: 'Root texts and essential commentaries from Vedanta, Tantra, Zen, and the Yogic sciences. Not for inspiration, but for transmission—for piercing through illusion, and walking the path toward clarity, great-realization, and direct perception.'},
+                { id: '007', title: 'Perception & Inner Architecture', desc: 'These books unravel how the human mind models the world — the assumptions beneath sight, memory, thought, and identity. They don\’t just describe reality; they reshape how it is felt.'},
+                { id: '008', title: 'Edge of Science & Knowing', desc: 'What science avoids, these works confront. Consciousness, paradox, unmeasurable truths. For readers ready to explore the cracks in the framework — where language fails, but insight begins.'},
+              ]
+            }"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 2xl:gap-8 mt-6 sm:mt-8"
+          >
+            <template x-for="category in categories" :key="category.id">
+              <div
+                class="bg-pure hover:bg-[#D8A75D]/10 active:bg-[#D8A75D]/10 min-h-[200px] px-2 py-4 sm:py-5 sm:px-6 border border-lines hover:border-accent active:border-accent select-none cursor-pointer"
+              >
+                <div>
+                  <h4
+                    x-text="category.title"
+                    class="font-semibold leading-[130%] tracking-[0.5px] text-lg sm:text-xl lg:text-[24px] 2xl:text-[28px]"
+                  ></h4>
+                  <h4
+                    x-text="category.desc"
+                    class="font-work-sans font-normal leading-[125%] tracking-[0.5px] text-text-2 mt-2.5"
+                  ></h4>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: Categories Section -->
+
+    <!-- Start: Essential Section -->
+    <section
+      id="essential"
+      class="py-[60px] sm:py-[80px] md:py-[100px] xl:pt-[120px] px-3 sm:px-4 bg-gradient-to-r from-[#D8A75D]/20 to-[#A5BBA2]/20"
+    >
+      <div class="max-w-[1240px] 2xl:max-w-[1440px] mx-auto">
+        <!-- Section Heading -->
+        <div class="flex flex-col gap-5">
+          <p
+            class="font-normal leading-[125%] tracking-[0.5px] text-sm sm:text-base md:text-lg text-text-2 border-b border-highlight w-max"
+          >
+            Essential Reads
+          </p>
+          <h3
+            class="font-semibold leading-[125%] tracking-[0.5px] text-xl sm:text-[22px] md:text-[28px] lg:text-[36px] 2xl:text-[42px] text-accent"
+          >
+            Foundational Books for the Inner & Outer Game
+          </h3>
+          <p
+            class="font-work-sans font-normal leading-[125%] tracking-[0.5px] text-text-2 max-w-[700px]"
+          >
+            These aren’t suggestions. They’re turning points — picked with
+            precision, tested by experience.
+          </p>
+        </div>
+
+        <!-- Section Content  -->
+        <div>
+          <div
+            x-data="{
+              books: [
+                { id: '001', cover: 'ops.jpg', author: 'Chase Hughes', title: 'The Behavior Operations Manual: Neuro-Cognitive Intelligence', desc: 'Built for operatives, but priceless for anyone serious about mastering influence, behavior, and the human machine.'},
+                { id: '002', cover: 'business.jpg', author: 'Gregory Hartley', title: 'The Most Dangerous Business Book You\'ll Ever Read', desc: 'A masterclass in influence, deception detection, and human leverage.'},
+                { id: '003', cover: 'simulacra.jpg', author: 'Jean Baudrillard', title: 'Simulacra and Simulation', desc: 'What if reality has been replaced by symbols? This book unmasks the false layers we\'ve normalized.'},
+                { id: '004', cover: 'amusing.png', author: 'Neil Postman', title: 'Amusing Ourselves to Death', desc: 'Shows how modern media isn\'t informing us — it\'s entertaining us into numbness.'},
+                { id: '005', cover: 'art.jpg', author: 'Steven Kotler', title: 'The Art of Impossible', desc: 'A cognitive blueprint for doing what seems unreachable — through neurobiology.'},
+                { id: '006', cover: 'truth.jpg', author: 'Nouk Sanchez', title: 'Take Me To Truth', desc: 'Cuts through the ego structure and destroy all fear — not with violence, but with radical honesty.'},
+                { id: '007', cover: 'happiness.jpg', author: 'Rupert Spira', title: 'You Are the Happiness You Seek', desc: 'Elegant invitation back to your own nature: peace, being, and presence.'},
+                { id: '008', cover: 'meditation.jpg', author: 'Adyashanti', title: 'True Meditation', desc: 'Dissolves all effort and control — leaves only awareness aware of itself.'}
+              ]
+            }"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 2xl:gap-8 mt-9 sm:mt-10"
+          >
+            <template x-for="book in books" :key="book.id">
+              <div
+                class="bg-gradient-to-br from-[hsla(45,50%,98%,0)] group-hover:from-[hsla(45,50%,98%,0.8)] group-active:from-[hsla(45,50%,98%,0.8)] to-[#F3F0E8] h-full hover:border-yellow-500 active:border-yellow-500 border border-lines p-[24px] select-none cursor-pointer flex flex-col sm:flex-row gap-5"
+              >
+                <div
+                  class="h-[150px] w-full max-w-[110px] bg-accent-2 px-1 flex items-center justify-center"
+                >
+                  <img
+                    :src="`assets/${book.cover}`"
+                    alt="book cover"
+                    class="h-full max-w-full"
+                  />
+                </div>
+
+                <div class="flex flex-col gap-2.5">
+                  <h4
+                    x-text="book.title"
+                    class="font-semibold leading-[130%] tracking-[0.5px] text-lg"
+                  ></h4>
+                  <p
+                    x-text="book.author"
+                    class="font-work-sans font-normal leading-[125%] tracking-[0.5px] text-sm text-gray-500"
+                  ></p>
+                  <p
+                    x-text="book.desc"
+                    class="font-work-sans font-normal leading-[125%] tracking-[0.5px] text-text-2"
+                  ></p>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: Essential Section -->
+
+    <!-- Start: FAQ Section -->
+    <section id="faq" class="py-[60px] sm:py-[80px] md:py-[100px] px-3 sm:px-4">
+      <div class="max-w-[1240px] 2xl:max-w-[1440px] mx-auto">
+        <!-- Section Heading -->
+        <div class="flex flex-col gap-5">
+          <h3
+            class="font-semibold leading-[125%] tracking-[0.5px] text-xl sm:text-[22px] md:text-[28px] lg:text-[36px] 2xl:text-[42px] text-accent-2"
+          >
+            Questions You Might Have
+          </h3>
+          <p
+            class="font-work-sans font-normal leading-[125%] tracking-[0.5px] text-text-2 max-w-[700px]"
+          >
+            Not everything needs an answer — but these might help.
+          </p>
+        </div>
+
+        <!-- Section Content  -->
+        <div>
+          <div
+            x-data="{
+              faqs: [
+                { id: '001', question: 'Why are there so few books on this site?', answer: 'We focus on depth and transformation, not volume. Each book is selected because it has the power to shift perspective, not just inform. This isn\'t a collection — it\'s a distillation.'},
+                { id: '002', question: 'Are these books academic, spiritual, or practical?', answer: 'They transcend categories. Some speak to the intellect, others to the inner self — but all serve transformation. If it doesn\'t translate into real change, it doesn\'t belong here.'},
+                { id: '003', question: 'How do you decide which books are included?', answer: 'We look for clarity, precision, and proof-of-impact. Every title is vetted for its ability to move a person from theory to realization — not more noise.'},
+                { id: '004', question: 'Do you update the list regularly?', answer: 'Occasionally, when a title meets the standard. New doesn\'t mean better. Timelessness carries more weight than trends.'},
+                { id: '005', question: 'Is there a hidden ideology or worldview behind the selections?', answer: 'None — other than a commitment to what\'s real and effective. We pull from diverse traditions, disciplines, and thinkers. If it cuts through illusion, it\'s considered.'},
+                { id: '006', question: 'Can I suggest a book for inclusion?', answer: 'Yes. But only if it has changed the way you see or live in a measurable way. We review suggestions with skepticism and care, not popularity.'},
+                { id: '007', question: 'Why is the site free?', answer: 'Because clarity should not be behind a paywall. We rely on those who\'ve found value here to keep it alive — not advertisers or algorithms.'},
+                { id: '008', question: 'Who is behind TrueShelf?', answer: 'A small group of people who care more about truth than polish. We remain anonymous to keep the attention on the books, not ourselves.'},
+                { id: '009', question: 'Is this site affiliated with any publisher, author, or sponsor?', answer: 'No. We remain completely independent. This allows full honesty in what we include — and more importantly, what we don\t.'},
+                { id: '010', question: 'Can I support this project?', answer: 'Yes. You can donate if you feel this space has brought value. Support ensures we stay distraction-free and aligned with our purpose.'},
+              ]
+            }"
+            class="flex flex-col max-w-[630px] mt-6 sm:mt-8"
+          >
+            <template x-for="faq in faqs" :key="faq.id">
+              <div class="border-b border-lines py-6 overflow-y-auto max-h-[140px]">
+                <div class="group">
+                  <h4
+                    x-text="faq.question"
+                    class="font-semibold leading-[130%] tracking-[0.5px] select-none"
+                  ></h4>
+
+                  <div class="hidden group-hover:block group-active:block">
+                    <h4
+                      x-text="faq.answer"
+                      class="font-work-sans font-medium leading-[125%] tracking-[0.5px] text-text-2 mt-2.5"
+                    ></h4>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: FAQ Section -->
+
+    <!-- Start: Donate Section -->
+    <section
+      id="donate"
+      class="relative overflow-hidden py-[60px] sm:py-[80px] md:py-[100px] px-3 sm:px-4 bg-pure"
+    >
+      <div class="relative z-40 max-w-[1240px] 2xl:max-w-[1440px] mx-auto">
+        <!-- Section Content -->
+        <div class="flex flex-col gap-5">
+          <h3
+            class="font-semibold leading-[125%] tracking-[0.5px] text-xl sm:text-[22px] md:text-[28px] lg:text-[36px] 2xl:text-[38px] text-accent"
+          >
+            Support the Shelf
+          </h3>
+          <p
+            class="font-work-sans font-normal leading-[125%] tracking-[0.5px] text-text-2 max-w-[700px]"
+          >
+            If TrueShelf has brought clarity, insight, or transformation to your
+            path — consider sustaining it. No paywalls. No ads. Just real books
+            that work.
+          </p>
+
+          <div class="mt-3">
+            <a
+              href="#"
+              class="font-work-sans font-normal leading-[140%] tracking-[0.5px] text-lg px-5 py-3 bg-highlight hover:bg-highlight-2 active:bg-highlight-2 transition-all"
+              >Make a Contribution</a
+            >
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="absolute inset-0 max-w-[1280px] 2xl:max-w-[1440px] mx-auto overflow-hidden flex items-center">
+        <div
+          class="
+          relative
+          -translate-x-[60%]
+          sm:-translate-x-[65%]
+          w-[380px] sm:w-[480px] lg:w-[560px] 2xl:w-[650px] aspect-square
+          "
+        >
+          <div
+            x-data="iconComponent('circle', 'w-full h-full')"
+            x-html="icon"
+          ></div>
+        </div>
+      </div>
+    </section>
+    <!-- End: Donate Section -->
+
+    <!-- Start: Footer -->
+    <footer class="text-center py-[24px] sm:py-[30px] border-t border-highlight">
+      <div class="select-none font-work-sans tracking-[0.5px] text-text-2">
+        © 2025 TrueShelf.
+      </div>
+    </footer>
+    <!-- End: Footer -->
+
+  </body>
+</html>
