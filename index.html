@@ -419,7 +419,7 @@
     <!-- End: Essential Section -->
 
     <!-- Start: FAQ Section -->
-    <section id="faq" class="py-[60px] sm:py-[80px] md:py-[100px] min-h-[1070px] px-3 sm:px-4">
+    <section id="faq" class="py-[60px] sm:py-[80px] md:py-[100px] px-3 sm:px-4">
       <div class="max-w-[1240px] 2xl:max-w-[1440px] mx-auto">
         <!-- Section Heading -->
         <div class="flex flex-col gap-5">
@@ -455,7 +455,7 @@
             class="flex flex-col max-w-[630px] mt-6 sm:mt-8"
           >
             <template x-for="faq in faqs" :key="faq.id">
-              <div class="border-b border-lines py-6">
+              <div class="border-b border-lines py-6 overflow-y-auto max-h-[140px]">
                 <div class="group">
                   <h4
                     x-text="faq.question"
@@ -482,7 +482,7 @@
       id="donate"
       class="relative overflow-hidden py-[60px] sm:py-[80px] md:py-[100px] px-3 sm:px-4 bg-pure"
     >
-      <div class="max-w-[1240px] 2xl:max-w-[1440px] mx-auto">
+      <div class="relative z-40 max-w-[1240px] 2xl:max-w-[1440px] mx-auto">
         <!-- Section Content -->
         <div class="flex flex-col gap-5">
           <h3
@@ -528,7 +528,7 @@
     <!-- End: Donate Section -->
 
     <!-- Start: Footer -->
-    <footer class="text-center py-[30px] border-t border-highlight">
+    <footer class="text-center py-[24px] sm:py-[30px] border-t border-highlight">
       <div class="select-none font-work-sans tracking-[0.5px] text-text-2">
         © 2025 TrueShelf.
       </div>
