@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/trueshelf/vite.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/trueshelf/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/trueshelf/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/trueshelf/favicon-16x16.png" />
+    <link rel="manifest" href="/trueshelf/site.webmanifest" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,10 +27,12 @@
         <div
           class="py-4 sm:py-6 relative flex items-center justify-between px-3 sm:px-4"
         >
-          <div
-            x-data="iconComponent('logo', 'w-[120px] md:w-[160px] lg:w-[180px]')"
-            x-html="icon"
-          ></div>
+          <a href="/trueshelf/">
+            <div
+              x-data="iconComponent('logo', 'w-[120px] md:w-[160px] lg:w-[180px]')"
+              x-html="icon"
+            ></div>
+          </a>
 
           <!-- large menu -->
           <ul
